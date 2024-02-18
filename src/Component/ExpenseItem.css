@@ -36,6 +36,10 @@
     padding: 0.5rem;
     border-radius: 12px;
   }
+  .LocOFExpend{
+    color: white;
+    font-weight: bold;
+  }
   
   @media (min-width: 580px) {
     .expense-item__description {
