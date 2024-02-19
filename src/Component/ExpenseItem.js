@@ -1,3 +1,5 @@
+import ExpenseDate from './ExpenseDate';
+import ExpenseDetails from './ExpenseDetails';
 import './ExpenseItem.css'
 
 
@@ -7,14 +9,11 @@ function ExpenseItem(props){
     // const expenseAmount = 264.55;
     // const locationOfExpenditure = 'moive'
 
+    
     return (
         <div className="expense-item"> 
-            <div>{props.date.toISOString()}</div>
-            <div className="expense-item__description">
-                <h2>{props.title}</h2>
-                <div className="LocOFExpend">{props.expendLoc}</div>
-                <div className="expense-item__price"> ${props.amount} </div>
-            </div>
+            <ExpenseDate date={props.date}></ExpenseDate>
+            <ExpenseDetails title={props.title} amount={props.amount} location={props.location}></ExpenseDetails>
            
         </div>
     )
