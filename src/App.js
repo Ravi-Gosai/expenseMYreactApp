@@ -1,8 +1,8 @@
 
 import './App.css';
 import ExpenseItem from './Component/ExpenseItem';
-
-function App() {
+import Card from './Component/Card';
+const App = ()=> {
   // const expends = {
   //   id:1,
   //   title:"car insurance !",
@@ -42,12 +42,14 @@ function App() {
     }
   ]
   return (
-   <div>
+   <Card className="card">
 
      <h1>let get strated</h1>
+     <div id = "parDiv">
      {expends.map(ele=><ExpenseItem {...ele} key={ele.id}></ExpenseItem>)}
+     </div>
      {/* <ExpenseItem {...expends}></ExpenseItem> */}
-   </div>
+     </Card>
  
   );
 }
