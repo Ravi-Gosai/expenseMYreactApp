@@ -2,6 +2,9 @@
 import './App.css';
 import ExpenseItem from './Component/ExpenseItem';
 import Card from './Component/Card';
+import NewExpense from './Component/NewExpense';
+
+
 const App = ()=> {
   // const expends = {
   //   id:1,
@@ -44,7 +47,9 @@ const App = ()=> {
   return (
    <Card className="card">
 
-     <h1>let get strated</h1>
+     {/* <h1>let get strated</h1> */}
+     <NewExpense></NewExpense>
+     
      <div id = "parDiv">
      {expends.map(ele=><ExpenseItem {...ele} key={ele.id}></ExpenseItem>)}
      </div>
