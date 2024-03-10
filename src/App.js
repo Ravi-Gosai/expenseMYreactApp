@@ -3,6 +3,7 @@ import './App.css';
 import ExpenseItem from './Component/ExpenseItem';
 import Card from './Component/Card';
 import NewExpense from './Component/NewExpense';
+import { useState } from 'react';
 
 
 const App = ()=> {
@@ -45,10 +46,16 @@ const App = ()=> {
     }
   ]
 
+  const [expendsDataCurr,setExpendsDataCurr]= useState(expends)
+
+
 
   const addExpensehandler = expense =>{
     console.log(" In app.js ");
     console.log(expense)
+    setExpendsDataCurr(()=>{
+      return [...expendsDataCurr,expense]
+    })
   }
   return (
    <Card className="card">
@@ -57,7 +64,7 @@ const App = ()=> {
      <NewExpense onAddExpense={addExpensehandler}></NewExpense>
      
      <div id = "parDiv">
-     {expends.map(ele=><ExpenseItem {...ele} key={ele.id}></ExpenseItem>)}
+     {expendsDataCurr.map(ele=><ExpenseItem {...ele} key={ele.id}></ExpenseItem>)}
      </div>
      {/* <ExpenseItem {...expends}></ExpenseItem> */}
      </Card>
