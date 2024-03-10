@@ -31,7 +31,12 @@ function ExpenseItem(props){
     return (
         <div className="expense-item"> 
             <ExpenseDate date={props.date}></ExpenseDate>
-            <ExpenseDetails title={title} amount={expense} location={props.location}></ExpenseDetails>
+            <ExpenseDetails title={title}
+                 amount={expense} 
+                // location={props.location}
+                >
+
+                </ExpenseDetails>
             <button onClick={clickHandler}> delete</button>
             <button onClick={clickHandlerTitle}>Change Title</button>
             <button onClick={clickHandlerExpense}>Change Expense</button>

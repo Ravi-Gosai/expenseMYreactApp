@@ -19,36 +19,42 @@ const App = ()=> {
       id:1,
       title:"car insurance !",
       amount : 264444.55,
-      date : new Date(2023,6,16),
-      location : 'manali'
+      date : new Date(2023,6,16)
+      // location : 'manali'
     },
     {
       id:2,
       title:"bike insurance !",
       amount : 264.55,
-      date : new Date(2023,4,15),
-      location : 'junagadh'
+      date : new Date(2023,4,15)
+      // location : 'junagadh'
     },
     {
       id:3,
       title:"truck insurance !",
       amount : 444.55,
-      date : new Date(2023,3,12),
-      location : 'mumbai'
+      date : new Date(2023,3,12)
+      // location : 'mumbai'
     },
     {
       id:4,
       title:"cycle insurance !",
       amount : 2644.55,
-      date : new Date(2023,3,15),
-      location : 'goa'
+      date : new Date(2023,3,15)
+      // location : 'goa'
     }
   ]
+
+
+  const addExpensehandler = expense =>{
+    console.log(" In app.js ");
+    console.log(expense)
+  }
   return (
    <Card className="card">
 
      {/* <h1>let get strated</h1> */}
-     <NewExpense></NewExpense>
+     <NewExpense onAddExpense={addExpensehandler}></NewExpense>
      
      <div id = "parDiv">
      {expends.map(ele=><ExpenseItem {...ele} key={ele.id}></ExpenseItem>)}
