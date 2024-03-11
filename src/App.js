@@ -32,14 +32,14 @@ const App = () => {
       id: 3,
       title: "truck insurance !",
       amount: 444.55,
-      date: new Date(2023, 3, 12),
+      date: new Date(2021, 3, 12),
       // location : 'mumbai'
     },
     {
       id: 4,
       title: "cycle insurance !",
       amount: 2644.55,
-      date: new Date(2023, 3, 15),
+      date: new Date(2020, 3, 15),
       // location : 'goa'
     },
   ];
