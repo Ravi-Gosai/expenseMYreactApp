@@ -3,6 +3,7 @@ import './Expenses.css'
 import Card from '../UI/Card';
 import { useState } from 'react';
 import ExpenseList from './ExpenseList';
+import ExpenseChart from './ExpenseChart';
 
 const Expenses = (props)=>{
 
@@ -35,6 +36,7 @@ const Expenses = (props)=>{
           {filterItems.length > 0 && (filterItems.map((ele) => (
             <ExpenseItem {...ele} key={ele.id}></ExpenseItem>
           )))} */}
+          <ExpenseChart expenses={filterItems}></ExpenseChart>
 
           <ExpenseList items={filterItems}></ExpenseList>
           {filterItems.length === 1 && <p>Only single Expense here. Please add more...</p>}
